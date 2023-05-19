@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,8 @@ namespace AM.Core.Domain
         public virtual Plane MyPlane { get; set; }
         public IList<Passenger> Passengers { get; set; }
         public String Comments { get; set; }
+        [ForeignKey("MyPlane")]
+        public int? PlaneId { get; set; }
         public override string ToString()
         {
             

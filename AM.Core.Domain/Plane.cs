@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace AM.Core.Domain
     }
     public class Plane
     {
+        [Range(0, int.MaxValue, ErrorMessage = "entier positive")]
         public int Capacity { get; set; }
 
         public DateTime ManufactureDate

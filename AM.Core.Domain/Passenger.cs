@@ -1,23 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace AM.Core.Domain
 {
     public class Passenger
     {
 
-        public int Id { get; set; }
+        // public int Id { get; set; }
+        [Display(Name = "Date of Birth")]
         public DateTime BirthDate { get; set; }
-
+        [Key]
+        [MinLength(7, ErrorMessage = "MinLength 7")]
+        [MaxLength(7, ErrorMessage = "MaxLength 7")]
         public string PassportNumber { get; set; }
+
+        [EmailAddress(ErrorMessage = "une address email invalid .")]
         public string EmailAdress { get; set; }
-        public string FirstName { get; set; }
-      
-        public string LastName { get; set; }
+        //  [MinLength(3, ErrorMessage = "MinLength 3")]
+        //[MaxLength(25, ErrorMessage = "MaxLength 25")]
+        //public string FirstName { get; set; }
+
+        //public string LastName { get; set; }
+        public  FullName MyFullName { get; set; }
+        [Phone(ErrorMessage = "une numero invalid .")]
         public int TelNumber { get; set; }
         int age;
         public int Age //ecriture full si j'ai un traitement à faire dans get
@@ -38,8 +49,8 @@ namespace AM.Core.Domain
             return "BirthDate:" + BirthDate + ";"
             + "PassportNumber:" + PassportNumber + ";"
             + "EmailAdress:" + EmailAdress + ";"
-            + "FirstName:" + FirstName + ";"
-            + "LastName:" + LastName + ";"
+            + "FirstName:" + MyFullName.Firstname + ";"
+            + "LastName:" + MyFullName.Lastname + ";"
              + "TelNumber:" + TelNumber;
 
 
@@ -48,9 +59,9 @@ namespace AM.Core.Domain
         public bool CheckProfile(string lastName, string firstName, string emailAdress = null)
         {
             if (emailAdress == null)
-                return lastName == LastName && firstName == FirstName;
+                return lastName == MyFullName.Lastname && firstName == MyFullName.Firstname;
             else
-                return lastName == LastName && firstName ==FirstName && emailAdress == EmailAdress;
+                return lastName == MyFullName.Lastname && firstName == MyFullName.Firstname && emailAdress == EmailAdress;
         }
 
 
