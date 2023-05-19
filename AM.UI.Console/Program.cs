@@ -56,4 +56,13 @@ Console.WriteLine("Hello, World!");
 //flight.GetDelay();
 
 
+//tp3 Q8
+Plane p = new Plane()
+{
+    Capacity = 200,
+    ManufactureDate = new DateTime(2000, 01, 01),
+    PlaneType = planeType.Airbus
+};
+
+
 

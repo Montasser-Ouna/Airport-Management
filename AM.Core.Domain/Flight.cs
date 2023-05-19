@@ -23,6 +23,7 @@ namespace AM.Core.Domain
 
         public virtual Plane MyPlane { get; set; }
         public IList<Passenger> Passengers { get; set; }
+        public String Comments { get; set; }
         public override string ToString()
         {
             
