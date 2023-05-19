@@ -8,6 +8,8 @@ namespace AM.Core.Domain
 {
     public class Flight
     {
+        public object passengers;
+
         public string Destination { get; set; }
 
         public string Departure { get; set; }
@@ -17,10 +19,10 @@ namespace AM.Core.Domain
         public int FlightId { get; set; }
         public DateTime EffectiveArrival { get; set; }
 
-        public DateTime EstimatedDuration { get;}
+        public int EstimatedDuration { get;}
 
         public virtual Plane MyPlane { get; set; }
-
+        public IList<Passenger> Passengers { get; set; }
         public override string ToString()
         {
             

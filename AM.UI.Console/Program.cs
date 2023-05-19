@@ -39,6 +39,21 @@ Console.WriteLine("Hello, World!");
 //passenger3.BirthDate = new DateTime(2000, 1, 1);
 ////passenger3.GetAge(passenger3);
 //Console.WriteLine(passenger3.Age);
+////TP2.Q13.c 
+//GetScore meth1 = delegate (Passenger p)
+//{
+//    return p.Flights.Count;
+//};
+//GetScore meth2 = delegate (Passenger p)
+//{
+//    return p.Flights.Where(f => f.Destination == "Tunisie" || f.Departure == "Tunisie")
+//    .Count();
+//};
+//Passenger pSenior1 =flightService.GetSeniorPassenger(meth1);
+//Passenger pSenior2 = flightService.GetSeniorPassenger(meth2);
+////TP2.Q14
+//Flight flight= new Flight();
+//flight.GetDelay();
 
 
 
