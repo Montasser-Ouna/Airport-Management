@@ -23,7 +23,12 @@ namespace AM.Data.Configurations
                     .IsRequired();
                 }
             );
-         
+            //tp5.1
+            builder.HasDiscriminator<int>("IsTraveller")
+               .HasValue<Passenger>(0)
+                .HasValue<Staff>(2)
+                .HasValue<Traveller>(1);
+
         }
     }
 }

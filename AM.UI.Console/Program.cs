@@ -57,12 +57,51 @@ Console.WriteLine("Hello, World!");
 
 
 //tp3 Q8
-Plane p = new Plane()
-{
-    Capacity = 200,
-    ManufactureDate = new DateTime(2000, 01, 01),
-    PlaneType = planeType.Airbus
-};
+//Plane p = new Plane()
+//{
+//  Capacity = 200,
+// ManufactureDate = new DateTime(2000, 01, 01),
+//PlaneType = planeType.Airbus
+//};
 
+//Reservation r = new Reservation()
+//{
+//    Price= 100,
+//    Seat= "coté fenetre",
+//    VIP= true,
+//    MyPassenger= p,
+//    MyFlight= f
+//};
+
+//TP5 Q10
+
+//Plane pl = new Plane()
+//{
+//    Capacity= 100,
+//    ManufactureDate= new DateTime(1999,1,1),
+//    MyPlaneType=PlaneType.Airbus
+//};
+
+//Flight fl = new Flight()
+//{
+//    Destination = "Paris",
+//    Departure = "Tunis",
+//    FlightDate = new DateTime(2022, 1, 1),
+//    EffectiveArrival = new DateTime(2022, 1, 2),
+//    EstimatedDuration = 120,
+//    MyPlane= pl
+
+//};
+
+//ctxt.Add(fl); //exec du code en mémoire
+//ctxt.Add(pl);
+//ctxt.SaveChanges();
+//Console.WriteLine(fl);
+//Console.WriteLine(fl.MyPlane);
+
+//tp5 q11
+Flight flightFromDB = (Flight)ctxt.Find(typeof(Flight), 2); //extraire de la bd
+Console.WriteLine(flightFromDB);
+Console.WriteLine(flightFromDB.MyPlane);
 
 
