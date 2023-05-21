@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 //using System.Numerics;
 using AM.Core.Domain;
+using AM.Data;
 
 Console.WriteLine("Hello, World!");
 //TP1 . Question7
@@ -72,7 +73,11 @@ Console.WriteLine("Hello, World!");
 //    MyPassenger= p,
 //    MyFlight= f
 //};
-
+AMContext ctxt = new AMContext(); //permet d'acceder la base
+//ctxt.Add(r);
+//ctxt.Add(p);   
+//ctxt.Add(f);    
+//ctxt.SaveChanges();
 //TP5 Q10
 
 //Plane pl = new Plane()
@@ -100,8 +105,7 @@ Console.WriteLine("Hello, World!");
 //Console.WriteLine(fl.MyPlane);
 
 //tp5 q11
-Flight flightFromDB = (Flight)ctxt.Find(typeof(Flight), 2); //extraire de la bd
-Console.WriteLine(flightFromDB);
-Console.WriteLine(flightFromDB.MyPlane);
+//Flight flightFromDB = (Flight)ctxt.Find(typeof(Flight), 2); //extraire de la bd
+//Console.WriteLine(flightFromDB.MyPlane);
 
 

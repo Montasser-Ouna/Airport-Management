@@ -29,8 +29,10 @@ namespace AM.Core.Domain
         //public string LastName { get; set; }
         public  FullName MyFullName { get; set; }
         [Phone(ErrorMessage = "une numero invalid .")]
+        public virtual IList<Reservation> Reservations { get; set; }
         public int TelNumber { get; set; }
         int age;
+        
         public int Age //ecriture full si j'ai un traitement à faire dans get
         {
             get

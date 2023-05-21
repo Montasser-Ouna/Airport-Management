@@ -1,6 +1,7 @@
 ﻿using AM.Core.Domain;
 using AM.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace AM.Data
 {
@@ -18,6 +19,8 @@ namespace AM.Data
                 (@"Data Source=(localdb)\mssqllocaldb;
                     Initial Catalog = Airport;
                     Integrated Security = true");
+            //tp5 quest 13
+            optionsBuilder.UseLazyLoadingProxies();
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,7 +31,9 @@ namespace AM.Data
             //modelBuilder.Entity<Staff>().ToTable("Staffs");
             //modelBuilder.Entity<Traveller>().ToTable("Travellers");
             //Tp5 Q7
-            //modelBuilder.ApplyConfiguration(new ReservationConfig());
+            modelBuilder.ApplyConfiguration(new ReservationConfig());
+
+          
 
         }
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)

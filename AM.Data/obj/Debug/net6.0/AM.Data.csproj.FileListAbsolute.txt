@@ -15,3 +15,5 @@ C:\Users\OUNA\Desktop\project\AirportManagement\AM.Data\obj\Debug\net6.0\AM.Data
 C:\Users\OUNA\Desktop\project\AirportManagement\AM.Data\obj\Debug\net6.0\ref\AM.Data.dll
 C:\Users\OUNA\Desktop\project\AirportManagement\AM.Data\bin\Debug\net6.0\AM.Data.runtimeconfig.json
 C:\Users\OUNA\Desktop\project\AirportManagement\AM.Data\obj\Debug\net6.0\AM.Data.genruntimeconfig.cache
+C:\Users\OUNA\Desktop\project\AirportManagement\AM.Data\bin\Debug\net6.0\AM.Core.Interfaces.dll
+C:\Users\OUNA\Desktop\project\AirportManagement\AM.Data\bin\Debug\net6.0\AM.Core.Interfaces.pdb
